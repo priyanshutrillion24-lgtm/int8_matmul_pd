@@ -1,0 +1,13 @@
+Test: OpenROAD-flow-scripts installation smoke test
+Design: GCD example
+Platform: SKY130HD
+Result: Complete flow reported through final GDSII generation
+Final layout: gcd_sky130hd_final.gds
+
+Purpose:
+Verify the installed EDA environment before implementing the
+INT8 matrix-multiply accelerator.
+
+Important:
+These results belong to the reference GCD example.
+They are not PPA results for the INT8 accelerator.

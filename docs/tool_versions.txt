@@ -1,0 +1,19 @@
+Project: RTL-to-GDSII Physical Design and PPA Optimization
+Design: INT8 Matrix-Multiply Accelerator
+
+Host environment:
+  OS: Ubuntu 26.04.1 LTS under WSL2
+  Git: 2.53.0
+  Python: 3.14.4
+  Verilator: 5.032
+
+Docker environment:
+  Image: openroad/orfs:latest
+  Yosys: 0.68+post
+  OpenROAD: executable verified; version reports unknown
+  KLayout: 0.30.12
+  Standalone OpenSTA: command not found on PATH
+  Timing analysis: use OpenROAD-integrated timing capabilities
+
+Technology platform:
+  SKY130HD platform directory exists
