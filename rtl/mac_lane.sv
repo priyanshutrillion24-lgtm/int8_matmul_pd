@@ -11,12 +11,14 @@ module mac_lane #(
     input  logic signed [DATA_W-1:0]     a_in,
     input  logic signed [DATA_W-1:0]     b_in,
 
-    output logic signed [ACC_W-1:0]      acc_value,
     output logic signed [ACC_W-1:0]      acc_next
 );
 
     // ACC_W must be >= 2*DATA_W.
     localparam integer PROD_W = 2 * DATA_W;
+
+    // Internal accumulator register; no external read port needed.
+    logic signed [ACC_W-1:0] acc_value;
 
     logic signed [PROD_W-1:0] a_ext;
     logic signed [PROD_W-1:0] b_ext;

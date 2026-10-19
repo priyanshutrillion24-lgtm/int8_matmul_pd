@@ -15,7 +15,6 @@ module mac_array #(
     input  logic [LANES*DATA_W-1:0]       b_bus,
 
     // Current and next accumulator values for every lane.
-    output logic [LANES*ACC_W-1:0]        acc_bus,
     output logic [LANES*ACC_W-1:0]        acc_next_bus
 );
 
@@ -25,7 +24,6 @@ module mac_array #(
         for (lane = 0; lane < LANES; lane = lane + 1) begin : gen_mac
 
             logic signed [DATA_W-1:0] b_lane;
-            logic signed [ACC_W-1:0]  acc_value_lane;
             logic signed [ACC_W-1:0]  acc_next_lane;
 
             // Extract this lane's signed B operand.
@@ -41,14 +39,10 @@ module mac_array #(
                 .first     (first),
                 .a_in      (a_in),
                 .b_in      (b_lane),
-                .acc_value (acc_value_lane),
                 .acc_next  (acc_next_lane)
             );
 
             // Pack each result into the corresponding bus slice.
-            assign acc_bus[lane*ACC_W +: ACC_W] =
-                acc_value_lane;
-
             assign acc_next_bus[lane*ACC_W +: ACC_W] =
                 acc_next_lane;
 
