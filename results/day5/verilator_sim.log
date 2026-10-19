@@ -1,0 +1,23 @@
+
+Running matrix test 0
+PASS: observed exactly 64 MAC cycles
+PASS: matrix test 0
+
+Running matrix test 1
+PASS: observed exactly 64 MAC cycles
+PASS: matrix test 1
+
+Running matrix test 2
+PASS: observed exactly 64 MAC cycles
+PASS: matrix test 2
+
+======================================
+ALL TESTS PASSED
+Matrices tested: 3
+Output elements checked: 192
+Expected MAC cycles per operation: 64
+======================================
+- tb/tb_int8_matmul_accel.sv:299: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 12us; walltime 0.009 s; speed 1.264 ms/s
+- Verilator: cpu 0.009 s on 1 threads; alloced 25 MB
