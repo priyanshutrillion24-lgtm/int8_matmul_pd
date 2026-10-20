@@ -1,0 +1,20 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 1 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+[INFO ODB-0227] LEF file: /OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd.tlef, created 13 layers, 25 vias
+[INFO ODB-0227] LEF file: /OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef, created 441 library cells
+[ERROR STA-0171] ./results/sky130hd/int8_matmul_accel/base/1_2_yosys.v line 36, syntax error
+STA-0171
+    while executing
+"ord::read_verilog_cmd [file nativename $filename]"
+    (procedure "read_verilog" line 2)
+    invoked from within
+"read_verilog $::env(RESULTS_DIR)/$design_file"
+    (procedure "load_design" line 29)
+    invoked from within
+"load_design 1_2_yosys.v 1_2_yosys.sdc"
+    (file "/OpenROAD-flow-scripts/flow/scripts/synth_odb.tcl" line 5)
+Elapsed time: 0:00.68[h:]min:sec. CPU time: user 0.60 sys 0.05 (96%). Peak memory: 103568KB.

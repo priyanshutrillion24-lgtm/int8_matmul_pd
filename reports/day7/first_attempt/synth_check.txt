@@ -1,0 +1,4 @@
+
+20. Executing CHECK pass (checking for obvious problems).
+Checking module int8_matmul_accel...
+Found and reported 0 problems.

@@ -1,0 +1,31 @@
+Yosys 0.68+post (git sha1 UNKNOWN, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
+Using ABC speed script.
+1. Executing Liberty frontend: /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+2. Executing Liberty frontend: /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+3. Executing Verilog-2005 frontend: /workspace/int8_matmul_pd/rtl/mac_lane.sv
+4. Executing Verilog-2005 frontend: /workspace/int8_matmul_pd/rtl/mac_array.sv
+5. Executing Verilog-2005 frontend: /workspace/int8_matmul_pd/rtl/matmul_controller.sv
+6. Executing Verilog-2005 frontend: /workspace/int8_matmul_pd/rtl/int8_matmul_accel.sv
+7. Executing Verilog-2005 frontend: /OpenROAD-flow-scripts/flow/platforms/sky130hd/cells_clkgate_hd.v
+8. Executing HIERARCHY pass (managing design hierarchy).
+9. Executing AST frontend in derive mode using pre-parsed AST for module `\int8_matmul_accel'.
+9.1. Analyzing design hierarchy..
+9.2. Executing AST frontend in derive mode using pre-parsed AST for module `\mac_array'.
+9.3. Executing AST frontend in derive mode using pre-parsed AST for module `\matmul_controller'.
+9.4. Analyzing design hierarchy..
+9.5. Executing AST frontend in derive mode using pre-parsed AST for module `\mac_lane'.
+9.6. Analyzing design hierarchy..
+9.7. Analyzing design hierarchy..
+10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Warning: Ignoring module matmul_controller because it contains processes (run 'proc' command first).
+Warning: Ignoring module int8_matmul_accel because it contains processes (run 'proc' command first).
+Warning: Ignoring module $paramod$174639793641f67d9f356196e99aa2188f4235c1\mac_lane because it contains processes (run 'proc' command first).
+11. Executing RTLIL backend.
+Warnings: 3 unique messages, 3 total
+End of script. Logfile hash: 4c4dca0078, time: 0.56s, user: 0.36s, system: 0.10s, MEM: 56.60 MB peak
+Yosys 0.68+post (git sha1 UNKNOWN, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
+Time spent: 76% 4x read_liberty (0 sec), 6% 10x read_verilog (0 sec), ...
+Elapsed time: 0:00.59[h:]min:sec. CPU time: user 0.45 sys 0.14 (99%). Peak memory: 60604KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+1_1_yosys_canonicalize .rtlil        0        1     1.00       59 dfd7c51507
