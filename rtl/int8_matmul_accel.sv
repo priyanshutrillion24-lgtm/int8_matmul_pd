@@ -16,7 +16,7 @@ module int8_matmul_accel (
 
     // Output matrix read interface
     input  logic [5:0]              rd_addr,
-    output logic signed [31:0]      rd_data
+    output logic [31:0] rd_data
 );
 
     localparam integer DATA_W = 8;
